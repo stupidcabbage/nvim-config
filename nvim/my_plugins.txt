@@ -1,0 +1,85 @@
+общие настройки вима
+==============================================================
+set mouse=a " Включает мышку
+set encoding=utf-8
+set number
+set noswapfile
+set scrolloff=7
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set fileformat=unix
+filetype indent on      " load filetype-specific indent files
+
+" for tabulation
+set smartindent
+set tabstop=2
+set expandtab
+set shiftwidth=2
+
+inoremap jk <esc>
+===================================================================
+Plugins
+=====================================================================
+
+Plug 'neovim/nvim-lspconfig' - ЛСП Сервер
+
+Авто комплит.
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+
+LuaSnip ?
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'L3MON4D3/LuaSnip'
+
+colorscheme
+Plug 'morhetz/gruvbox'
+
+Размытие заднего фона: (не нужно как понимаю)
+Plug 'xiyaowong/nvim-transparent'
+
+Autosave
+Plug 'Pocco81/auto-save.nvim'
+
+Быстрый поиск по двум буквам.
+Plug 'justinmk/vim-sneak'
+
+
+" JS/JSX/TS
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'maxmellon/vim-jsx-pretty'
+" TS from here https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+
+?? 
+Plug 'nvim-lua/plenary.nvim'
+
+Типо украшает JSON там и все такое
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+
+TELESCOPE - быстрый поск по файлам.
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
+Поодсветка при показании функции (аргументы и т.п.)
+Plug 'ray-x/lsp_signature.nvim'
+
+Wakatime
+
+Plug 'wakatime/vim-wakatime'
+
+
+CocNvim
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Ruff
+Plug 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
